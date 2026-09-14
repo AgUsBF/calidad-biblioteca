@@ -1,10 +1,6 @@
 package com.biblioteca.model;
 
 import jakarta.persistence.*;
-
-import java.time.LocalDate;
-
-import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
