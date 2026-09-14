@@ -24,6 +24,8 @@ public class Libro {
         this.prestado = false;
     }
 
+    // --- GETTERS ---
+
     public Long getId() {
         return id;
     }
@@ -48,12 +50,50 @@ public class Libro {
         return prestado;
     }
 
+    // --- SETTERS ---
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
     public void setPrestado(boolean prestado) {
         this.prestado = prestado;
     }
+
+    public String prestar() {
+
+        if (titulo == null) {
+            return "No se puede prestar";
+        }
+
+        if (titulo.isEmpty()) {
+            return "No se puede prestar";
+        }
+
+        if (autor == null) {
+            return "No se puede prestar";
+        }
+
+        if (autor.isEmpty()) {
+            return "No se puede prestar";
+        }
+
+        if (prestado) {
+            return "El libro ya está prestado";
+        }
+
+        prestado = true;
+
+        return "Libro prestado correctamente";
+    }
+
 }
-
-
-
-
 
